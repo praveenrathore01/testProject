@@ -1,0 +1,266 @@
+.CPBodyRow {
+  background-color: #fffef2;
+  background-color: var(--main_bgcolor);
+  max-width: 100%;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 1000ms;
+  a:hover {
+    text-decoration: none;
+  }
+}
+.CPBodyRow--light {
+  background-color: #f6f5e8;
+  .CPSubcatProduct {
+    &:hover {
+      background-color: #f0efe1;
+    }
+  }
+}
+.CPBodyRow--dark {
+  background-color: #ebeade;
+  .CPSubcatProduct {
+    &:hover {
+      background-color: #e5e4d8;
+    }
+  }
+}
+.CPSubcatIntro {
+  padding: 50px 20px 20px;
+}
+.CPSubcatIntroDescription {
+  color: #252525;
+  font-family: "Suisse Regular", sans-serif;
+}
+.CPSubcatIntroDescription-btn {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.CPSubcatIntroDescription-name {
+  font-size: 2.4rem;
+}
+.CPSubcatIntroDescription-info {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+.CPSubcatIntroCTA {
+  width: 100%;
+}
+.CPSubcatIntroCTA-wrapper {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+}
+.CPSubcatIntroCTA-text {
+  color: #252525;
+  font-family: "Suisse Medium", sans-serif;
+  font-size: 1.4rem;
+  text-align: left;
+}
+.CPSubcatIntroCTA-icon {
+  fill: #252525;
+  height: 13px;
+  margin: 3px 0 0 20px;
+  width: 13px;
+}
+.CPBodyScrollable {
+  -ms-flex-order: 2;
+  order: 2;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.CPBodyScrollable-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.CPSubcatProduct {
+  height: 270px;
+  transition: background-color 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 1000ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    width 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 800ms,
+    height 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 800ms;
+  width: 100%;
+}
+.CPSubcatProductSizePrice {
+  font-family: "Suisse Regular", sans-serif;
+  font-size: 1.4rem;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+  * {
+    font-size: inherit;
+  }
+}
+.CPSubcatProductSizePrice-name {
+  font-family: "Suisse Medium", sans-serif;
+  color: #252525;
+  margin-bottom: 10px;
+}
+.CPSubcatProductSizePrice-info {
+  color: #666;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: opacity 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.CPSubcatProductSizePrice-separator {
+  color: rgba(51, 51, 51, 0.2);
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.CPSubcatProduct-picture > img {
+  display: block;
+  margin: 0 auto;
+  max-height: 220px;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 700ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.CPBodyScrollable-nav {
+  height: 100%;
+  pointer-events: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  & > * {
+    pointer-events: all;
+  }
+}
+.CPBodyScrollable-navBtnTrigger {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.001);
+  display: -ms-flexbox;
+  display: flex;
+  height: 320px;
+  position: absolute;
+  width: 20%;
+  width: 100px;
+}
+.CPBodyScrollable-navBtnTrigger--left {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  left: 0;
+}
+.CPBodyScrollable-navBtnTrigger {
+  height: 100%;
+}
+@media (min-width: 640px) {
+  .CPBodyRow {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .CPBodyRow-intro {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    width: calc(100% * 2 / 7);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 370px;
+  }
+  .CPSubcatIntro {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 40px 17px 40px 34px;
+  }
+  .CPSubcatIntroDescription {
+    margin-top: auto;
+    padding: 0 0 25px;
+  }
+  .CPSubcatIntroDescription-name {
+    font-size: 1.8rem;
+  }
+  .CPSubcatIntroDescription-info {
+    font-size: 1.2rem;
+  }
+  .CPSubcatIntroCTA-wrapper {
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .CPBodyScrollable-wrapper {
+    height: 100%;
+  }
+  .CPBodyRow-scrollableProduct {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    width: calc(100% * 2 / 5);
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .CPSubcatProduct {
+    height: 370px;
+  }
+  .CPSubcatProduct-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+  .CPSubcatProductSizePrice {
+    height: 90px;
+    margin: 0 auto;
+    padding: 0 34px;
+  }
+  .CPSubcatProduct-picture {
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -ms-flexbox;
+    display: flex;
+    height: 280px;
+  }
+  .CPSubcatProduct-picture > img {
+    height: auto;
+    max-height: none;
+    width: 180px;
+  }
+}
+@media (min-width: 1025px) {
+  .CPBodyRow-intro {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    width: calc(100% * 2 / 9);
+    height: 530px;
+  }
+  .CPSubcatIntro {
+    padding: 40px 20px 71px 40px;
+  }
+  .CPSubcatIntroDescription {
+    padding: 0 0 50px;
+  }
+  .CPSubcatIntroDescription-name {
+    font-size: 2.4rem;
+  }
+  .CPSubcatIntroDescription-info {
+    font-size: 1.6rem;
+  }
+  .CPBodyRow-scrollableProduct {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    width: calc(100% * 2 / 7);
+  }
+  .CPSubcatProduct {
+    height: 530px;
+    height: 100%;
+  }
+  .CPSubcatProductSizePrice {
+    padding: 0 40px;
+  }
+  .CPSubcatProduct-picture {
+    height: 440px;
+  }
+  .CPSubcatProduct-picture > img {
+    width: 330px;
+  }
+}
